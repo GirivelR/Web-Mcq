@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students details</title>
+    <style>
+    table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+    width:1%;
+}
+</style>
+</head>
+<body><table style="width:30%;height:50%">
+    <tr>
+        <td><b>Roll_Name</b></td>
+        <td><b>Marks</b></td>
+    </tr>
+{% for i in det %}
+    <tr>
+        <td>{{i[0]}}</td>
+        <td>{{i[4]}}</td>
+    </tr>
+{% endfor %}
+</table><br>
+<br>
+<table style="width:30%;height:50%">
+    <tr>
+        <td><b>Roll_Name</b></td>
+        <td><b>Teacher Id</b></td>
+        <td><b>School Name</b></td>
+        <td><b>Class-Section</b></td>
+        <td><b>Marks</b></td>
+        <td><b>Students Password</b></td>
+    </tr>
+{% for i in det %}
+    <tr>
+        {% for j in i %}
+            <td>{{j}}</td>
+        {% endfor %}
+    </tr>
+{% endfor %}
+</table>
+
+</body>
+</html>
